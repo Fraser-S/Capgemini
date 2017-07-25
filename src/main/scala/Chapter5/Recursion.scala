@@ -22,10 +22,10 @@ class Recursion {
     case _ => list.last::reverse(list.init)
   }
 
-  def zip(listA: List[Int], listB: List[Int]): List[List[Int]] = {
+/*  def zip(listA: List[Int], listB: List[Int]): List[List[Int]] = {
     case stop if listA.isEmpty || listB.isEmpty => List(List())
-    case _ => List(List(listA.head,listB.head))::zip(listA.tail,listB.tail)
-  }
+    case _ => List(List(listA.head,listB.head)):::zip(listA.tail,listB.tail)
+  }*/
 
   def elem(list : List[Any], element: Any):Boolean = list match{
     case exit if list.isEmpty => false

@@ -9,5 +9,5 @@ class Currying {
     x*y*z
   }
 
-  def multTwoWith9 = multThree(9)
+  //def multTwoWith9 = multThree(9)
 }

@@ -8,8 +8,8 @@ import org.scalatest._
 class TypesAndClassesTest extends FlatSpec with Matchers{
   val types = new TypesAndClasses()
 
-  "Check Type" should "return 'string' when passed a string" in {
-    types.checkType("a string")  shouldBe "string"
+  "Check Type" should "return 'String' when passed a string" in {
+    types.checkType("a string")  shouldBe "String"
   }
 
   it should "return 'Char' when passed a Char" in {
@@ -32,7 +32,18 @@ class TypesAndClassesTest extends FlatSpec with Matchers{
     types.checkType(true)  shouldBe "Boolean"
   }
 
-  it should "return '\"Type not in statement\"' when passed a type thats npt in the statement" in {
+  it should "return '\"Type not in statement\"' when passed a type that's npt in the statement" in {
     types.checkType(1239413L) shouldBe "Type not in statement"
   }
+
+  "show" should "return an '4232345.0' when passed 4232345f" in {
+    val num:Float = 4232345f
+    types.show(num) shouldBe "4232345.0"
+  }
+
+  "show" should "return an 'true' when passed true" in {
+    val con:Boolean = true
+    types.show(con) shouldBe "true"
+  }
+
 }
