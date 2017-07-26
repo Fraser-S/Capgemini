@@ -45,8 +45,8 @@ class PatternMatching {
   def tell(list: List[Any]) :String = list match{
     case Nil => "the List is Empty"
     case a::Nil => "the List has 1 element " + a
-    case b::a::Nil => "the list has two elements " + a + " and " + b
-    case b::a::_ => "the list has many elements, initial are " + a + " and " + b
+    case a::b::Nil => "the list has two elements " + a + " and " + b
+    case a::b::_ => "the list has many elements, initial are " + a + " and " + b
   }
 
   def myLength(list: List[Any]) :Int = list match {
